@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Fetch App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Centered Loading Overlay -->
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1>Weather Fetch</h1>
+            <p>Real-time global weather & forecast</p>
+        </header>
+
+        <form id="weather-form" class="search-box">
+            <input 
+                type="text" 
+                id="city-input" 
+                placeholder="Enter city name (e.g., Kolkata, London, Tokyo)..." 
+                required 
+                autocomplete="off"
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="error-message" class="error-message hidden"></div>
+
+        <section id="weather-card" class="weather-card hidden">
+            <div class="location-info">
+                <h2 id="city-name">--</h2>
+                <span id="date-time">--</span>
+            </div>
+
+            <div class="current-weather">
+                <div class="temp-box">
+                    <span id="weather-icon" class="weather-icon">☀️</span>
+                    <span id="temperature">--°C</span>
+                </div>
+                <p id="weather-desc" class="weather-desc">--</p>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="label">Feels Like</span>
+                    <span id="feels-like" class="value">--°C</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Humidity</span>
+                    <span id="humidity" class="value">--%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Wind Speed</span>
+                    <span id="wind-speed" class="value">-- km/h</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Precipitation</span>
+                    <span id="precipitation" class="value">-- mm</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
